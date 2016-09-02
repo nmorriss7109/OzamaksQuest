@@ -294,10 +294,26 @@ def rooms(room, p, sk, sp, zb, pa, wd):
             print "That was the right path! You make it accross safely."
         elif userIn == '1':
             print "You step on the first platform and you hear a slow rumble...and then nothing.\n You have taken the correct first step."
+            userIn = raw_input('>')
             if userIn == '1':
                 print "You step on to the next platform. You have chosen wisely."
+                userIn = raw_input('>')
                 if userIn == '2':
                     print "You step on to the next platform. You have chosen wisely."
+                    userIn = raw_input('>')
+                    if userIn == '3':
+                        print "You step on to the next platform. You have chosen wisely."
+                        userIn = raw_input('>')
+                        if userIn == '5':
+                            print "You step on to the next platform. You have chosen wisely."
+                        else:
+                            print "You take a wrong step and plummet to your death."
+                            p[1] = 0
+                            return p
+                    else:
+                        print "You take a wrong step and plummet to your death."
+                        p[1] = 0
+                        return p
                 else:
                     print "You take a wrong step and plummet to your death."
                     p[1] = 0
