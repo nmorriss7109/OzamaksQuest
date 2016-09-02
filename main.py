@@ -10,7 +10,7 @@ print "      ||     ||  ||     ||  ||      \\\_____       ||"
 print "      ||   \\\||  ||     ||  ||====         \\\     ||"
 print "      \\\____\\\   \\\_____//  ||____   ______//     ||"
 print " "
-print "Centuries ago, the land of Amarin thrived under the rule of king Ozamak, \na wise and powerful ruler who placed the comfort of his kingdom above his own. \nEventually, however, Ozamak's power and riches began to corrupt his once-benevolent spirit. \nBy the end of the king's life, wars, famine, and disease had desomated his kingdom while he \nhid away in his castle's dungeons, admiring his wealth. Fearing death, Ozamak cast a spell \nupon himself, binding his consciousness to his body indefinitely. Ozamak the Lich guards the \ndungeon's treasure to this day. It is your duty to slay Ozamak and restore Amarin's glory!"
+print "Centuries ago, the land of Amarin thrived under the rule of King Ozamak, \na wise and powerful ruler who placed the comfort of his kingdom above his own. \nEventually, however, Ozamak's power and riches began to corrupt his once-benevolent spirit. \nBy the end of the king's life, wars, famine, and disease had desomated his kingdom while he \nhid away in his castle's dungeons, admiring his wealth. Fearing death, Ozamak cast a spell \nupon himself, binding his consciousness to his body indefinitely. Ozamak the Lich guards the \ndungeon's treasure to this day. It is your duty to slay Ozamak and restore Amarin's glory!"
 print " "
 print 'What is your name, noble adventurer?'
 name = raw_input('>')
