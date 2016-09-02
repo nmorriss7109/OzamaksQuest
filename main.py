@@ -290,13 +290,18 @@ def rooms(room, p, sk, sp, zb, pa, wd):
 		print "Starting from the bottom, taking one step per row, enter the numbers of the steps you wish to take\nseparated by spaces. ie:2 4 1 3 5"
 
 		userIn = raw_input('>')
-		if userIn ​elif userIn == '1':
-        	print "You step on the first platform and you hear a slow rumble...and then nothing.\n You have taken the correct first step."== '1 1 2 3 5':
-			print "That was the right path! You make it accross safely."
+		if userIn == '1 1 2 3 5' or userIn == '11235':
+        	print "That was the right path! You make it accross safely."
         elif userIn == '1':
         	print "You step on the first platform and you hear a slow rumble...and then nothing.\n You have taken the correct first step."
             if userIn == '1':
         		print "You step on to the next platform. You have chosen wisely."
+                if userIn == '2':
+        			print "You step on to the next platform. You have chosen wisely."
+            	else:
+       				print "You take a wrong step and plummet to your death."
+					p[1] = 0
+					return p
             else:
        			print "You take a wrong step and plummet to your death."
 				p[1] = 0
