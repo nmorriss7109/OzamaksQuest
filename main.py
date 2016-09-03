@@ -287,7 +287,7 @@ def rooms(room, p, sk, sp, zb, pa, wd):
         print "  =================================================================="
         print "                               START"
         print " "
-        print "Starting from the bottom, taking one step per row, enter the numbers of the steps you wish to take\nseparated by spaces. ie:2 4 1 3 5"
+        print "Which path would you like to take?"
 
         userIn = raw_input('>')
         if userIn == '1 1 2 3 5' or userIn == '11235':
@@ -347,7 +347,7 @@ def rooms(room, p, sk, sp, zb, pa, wd):
         print "filler 3"
         return p
     elif room == 4:
-        print "You escaped the skeletons but now find yourself in a dusty library full of tomes and spellbooks.\nUnfortunately, you dropped your torch as you were making your escape. Now your only source of light\nis that of the torch through the crack you climbed through."
+        print "You find yourself in a dusty library full of tomes and spellbooks.\nUnfortunately, you dropped your torch as you were making your escape. Now your only source of light\nis that of the torch through the crack you climbed through."
         p = user_input(p, room)
         print "You walk a bit further into the labyrinth of books but don't have enought light to proceed.\nYou decide to look through some spellbooks for something to help you navigate the maze. One ancient,\nleather-bound tome with a ruby-studded spine stands out in particular. You open it and find this:"
         p[13] = False
@@ -358,11 +358,12 @@ def rooms(room, p, sk, sp, zb, pa, wd):
                 break
         print "That spell seems to have proveded you with a portable light source!"
         p = user_input(p, room)
-        print "The area is illuminated just in time to reveal a nest of spiders.\nYou still have time to flee but in doing so you could miss out on some loot. (escape, fight)"
-
+        print "The aresafsdaa is illuminated just in time to reveal a nest of spiders.\nYou still have time to flee but in doing so you could miss out on some loot. (escape, fight)"
+        escaped = False
         while 1:
             userIn = raw_input('>')
             if userIn.lower() == 'escape':
+                escaped = True
                 break
             elif userIn.lower() == 'fight':
                 print "You have a spider in your sights!"
@@ -380,17 +381,17 @@ def rooms(room, p, sk, sp, zb, pa, wd):
                     return p
             else:
                 print "Not a valid command."
-
-        print "You defeated the nest and claim a healing potion (+50 hp)"
-        p[5] += 1
-
+        if escaped != True:
+            print "You defeated the nest and claim a healing potion (+50 hp)"
+            p[5] += 1
+        elif escaped == True: 
+            print "You sneak past the spiders. You watch for a second as they meticulously craft their massive webs. You hurry past."
         print "As you continue to walk, the rows of book cases grow farther apart and you eventually\nreach a deep moat filled with man-eating leaches. The exit seems to be just on the other side!"
         while 1:
             print "You must find a way to cross the moat."
             p = user_input(p, room)
             if p[18] == True:
                 break
-
         print "The spell you used froze the water in front of you! You may now cross the frozen moat."
         p = user_input(p, room)
         print "You arrive at the exit"
@@ -468,7 +469,7 @@ def choose_room(p):
 
     p = user_input(p, room)
 
-    print "You walk over to the second door and see this carving on it:"
+    print "You walk over to the third door and see this carving on it:"
     print " "
     print "    |\_                      _/|"
     print "    |  \___              ___/  |"
