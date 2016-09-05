@@ -344,7 +344,7 @@ def rooms(room, p, sk, sp, zb, pa, wd):
         print "filler 2"
         return p
     elif room == 3:
-        print "filler 3"
+        print You see a large bronze lock on the front of the door. Engraved on the front it reads, DO NOT OPEN. DEAD INSIDE"
         return p
     elif room == 4:
         print "You find yourself in a dusty library full of tomes and spellbooks.\nUnfortunately, you dropped your torch as you were making your escape. Now your only source of light\nis that of the torch through the crack you climbed through."
